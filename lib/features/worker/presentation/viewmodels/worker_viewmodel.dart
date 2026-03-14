@@ -74,7 +74,8 @@ class WorkerViewModel extends ChangeNotifier {
     try {
       await _workerRepository.updateAvailability(_profile!.uid, isAvailable);
       _profile = WorkerProfile(
-        uid: _profile!.uid, 
+        uid: _profile!.uid,
+        nic: _profile!.nic,
         name: _profile!.name, 
         phone: _profile!.phone, 
         district: _profile!.district, 
@@ -84,7 +85,12 @@ class WorkerViewModel extends ChangeNotifier {
         rating: _profile!.rating, 
         completedJobs: _profile!.completedJobs, 
         isAvailable: isAvailable, 
-        availabilityMode: _profile!.availabilityMode
+        availabilityMode: _profile!.availabilityMode,
+        homeLat: _profile!.homeLat,
+        homeLng: _profile!.homeLng,
+        currentLat: _profile!.currentLat,
+        currentLng: _profile!.currentLng,
+        workerType: _profile!.workerType,
       );
     } catch (e) {
       _setError(e.toString());

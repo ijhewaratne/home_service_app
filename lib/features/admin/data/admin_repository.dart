@@ -9,6 +9,7 @@ class AdminRepository {
     return [
       WorkerProfile(
         uid: 'wrk_999',
+        nic: '951234567V',
         name: 'Pending Jane',
         phone: '+94711111111',
         district: 'Colombo',

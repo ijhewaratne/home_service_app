@@ -7,6 +7,7 @@ class WorkerRepository {
     await Future.delayed(const Duration(milliseconds: 800));
     return WorkerProfile(
       uid: workerId,
+      nic: '901234567V',
       name: 'Sample Worker',
       phone: '+94770000000',
       district: 'Colombo',
